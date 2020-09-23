@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package c1_easy
 
 func twoSum(nums []int, target int) []int {
 	var n int
@@ -18,10 +16,4 @@ func twoSum(nums []int, target int) []int {
 		}
 	}
 	return ret
-}
-
-func main() {
-	input := []int{3, 2, 4}
-	ret := twoSum(input, 6)
-	fmt.Println(ret)
 }
