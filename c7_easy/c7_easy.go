@@ -40,9 +40,12 @@ func reverse(x int) int {
 }
 
 func reverseSolution(x int) int {
+	if x > math.MaxInt32 || x < math.MinInt32 {
+		return 0
+	}
 	var pop int
 	var rev = 0
-	for ;x != 0; x /= 10 {
+	for ; x != 0; x /= 10 {
 		pop = x % 10
 		if rev > math.MaxInt32 / 10 ||
 			(rev == math.MaxInt32 / 10 && pop > 7) {
